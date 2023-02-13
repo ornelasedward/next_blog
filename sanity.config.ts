@@ -14,8 +14,8 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 export default defineConfig({
   basePath: "/studio", // <-- important that `basePath` matches the route you're mounting your studio from, it applies to both `/pages` and `/app`
 
-  projectId,
-  dataset,
+  projectId: "ogim55wm",
+  dataset: "production",
 
   plugins: [
     deskTool({
@@ -30,8 +30,8 @@ export default defineConfig({
   icon: Logo,
   logo: Logo,
   subtitle: "Login to manage the Blog",
-  title: "PAPAFAM Content Studio",
-  name: "PAPAFAM_Content_Studio",
+  name: "default",
+  title: "example_blog",
   studio: {
     components: {
       logo: Logo,
