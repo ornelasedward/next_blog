@@ -1,31 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import Logo from "../public/images/logo.png";
+
+const navigation = [{ name: "Profitwise", href: "#" }];
+
 function Header() {
   return (
-    <div className="flex items-center justify-between space-x-2 font-bold px-10 py-5">
-      <div className="flex items-center space-x-2">
-        <Link href="/">
-          <Image
-            src="https://links.papareact.com/1m8"
-            width={50}
-            className="rounded-full"
-            height={50}
-            alt="logo"
-          />
-        </Link>
-        <h1>The PAPAFAM</h1>
-      </div>
-
-      <div>
-        <Link
-          href="/"
-          className="px-5 py-3 text-sm md:text-base bg-gray-900 text-[#F7AB0A] flex items-center rounded-full text-center"
-        >
-          Sign up to the University of Code
-        </Link>
-      </div>
-    </div>
+    <header className="bg-indigo-600">
+      <nav className="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
+        <div className="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none">
+          <div className="flex items-center">
+            <a href="#">
+              <span className="sr-only">Profitwise</span>
+              <img
+                className="h-10 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                alt=""
+              />
+            </a>
+            <div className="ml-2 space-x-8 block">
+              {navigation.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-2xl font-medium text-white hover:text-indigo-50"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
 

@@ -6,7 +6,7 @@ function Logo(props: any) {
       <img
         className="rounded-full"
         width={50}
-        src="https://links.papareact.com/1m8"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
         alt="logo"
       />
       {renderDefault && <>{renderDefault(props)}</>}
