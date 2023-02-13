@@ -9,8 +9,8 @@ type Props = {
 
 export default function BlogList({ posts }: Props) {
   return (
-    <div>
-      <hr className=" border-[#F7AB0A] mb-10" />
+    <div className="max-w-[1280px] m-auto">
+      <hr className=" border-[#4F46E5] mb-10" />
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
         {posts.map((post) => (
           <ClientSideRoute route={`/post/${post.slug.current}`} key={post._id}>
