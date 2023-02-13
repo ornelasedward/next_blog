@@ -38,8 +38,8 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug: slug });
 
   return (
-    <article className="px-10 pb-28">
-      <section className="space-y-2 border border-[#F7AB0A] text-white">
+    <article className="pb-28 max-w-[1280px] m-auto">
+      <section className="space-y-2 border border-[#4F46E5] text-white">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
           <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
             <Image
@@ -50,7 +50,7 @@ async function Post({ params: { slug } }: Props) {
             />
           </div>
 
-          <section className="p-5 bg-[#F7AB0A] w-full">
+          <section className="p-5 bg-[#4F46E5] w-full">
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
               <div>
                 <h1 className="text-4xl font-extrabold">{post.title}</h1>
@@ -99,8 +99,9 @@ async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-
-      <PortableText value={post.body} components={RichTextComponents} />
+      <div className="py-10 px-2">
+        <PortableText value={post.body} components={RichTextComponents} />
+      </div>
     </article>
   );
 }
