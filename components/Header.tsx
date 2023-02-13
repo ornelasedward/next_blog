@@ -42,7 +42,7 @@ function Header() {
               href="/"
               className="inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-indigo-600 hover:bg-indigo-50"
             >
-              Sign up
+              Join now
             </a>
           </div>
         </div>
